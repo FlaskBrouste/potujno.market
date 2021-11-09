@@ -30,6 +30,22 @@
             "price": 92,
             "author_id": 1,
             "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/led.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "Arduino UNO",
+            "description": "Brand new and high quality.",
+            "price": 180,
+            "author_id": 3,
+            "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/arduino.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "ESP8266 5V",
+            "description": "This wireless relay is based on the AI-Thinker ESP-01S WIFI module.",
+            "price": 300,
+            "author_id": 2,
+            "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/wifi.jpeg"
         }
     ]
 }
