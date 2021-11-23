@@ -46,6 +46,30 @@
             "price": 300,
             "author_id": 2,
             "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/wifi.jpeg"
+        },
+        {
+            "id": 4,
+            "name": "RGB",
+            "description": "Can make color party.",
+            "price": 92,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/rgb.png"
+        },
+        {
+            "id": 5,
+            "name": "Resistor 10k Ohm",
+            "description": "Can resist the voltage. Super cool.",
+            "price": 180,
+            "author_id": 3,
+            "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/resistor.png"
+        },
+        {
+            "id": 6,
+            "name": "7-Segment Display",
+            "description": "Epic.",
+            "price": 300,
+            "author_id": 2,
+            "photo_url": "https://raw.githubusercontent.com/blacksempai/martplace/master/img/7-seg.jpg"
         }
     ]
 }
