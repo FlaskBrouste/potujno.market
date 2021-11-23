@@ -39,6 +39,7 @@ let cartProd = document.getElementById('cart-products');
 
 let cart = [];
 if(localStorage.getItem('cart')) {
+    console.log(localStorage.getItem('cart'))
     cart = JSON.parse(localStorage.getItem('cart'));
     drawCartProducts();
 }
@@ -72,13 +73,13 @@ function drawCartProducts() {
 function buyAll() {
     cart = [];
     cartProd.innerHTML = 'Money was withdrawn from your credit card';
-    localStorage.setItem("cart", null);
+    localStorage.setItem("cart", '[]');
 }
 
 function openCart() {
-    if (cartProd.style.display === "none") {
-        cartProd.style.display = "block";
+    if (cartProd.style.display === 'none') {
+        cartProd.style.display = 'block';
     } else {
-        cartProd.style.display = "none";
+        cartProd.style.display = 'none';
     }
 }
