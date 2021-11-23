@@ -45,6 +45,7 @@ header {
 
 button {
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 #cart-button {
