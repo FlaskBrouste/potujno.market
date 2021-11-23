@@ -79,7 +79,7 @@ button {
     border-bottom: solid #000 16px;
     position: relative;
     top: -2.7rem;
-    left: 11.8rem;
+    left: 15.8rem;
     z-index: -1;
 }
 
@@ -89,7 +89,7 @@ button {
     background-color: #fff;
     top: 59px;
     right: 0rem;
-    left: -12rem;
+    left: -16rem;
     position: absolute;
     display: none;
     padding: 10px;
