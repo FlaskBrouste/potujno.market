@@ -51,6 +51,8 @@ button {
     min-width: 50%;
 }
 
+/* -----Cart----- */
+
 #cart-button {
     background: none;
     border: none;
@@ -61,6 +63,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s;
 }
 
 #cart {
@@ -73,6 +76,10 @@ button {
 }
 
 #cart-button:hover {
+    background-color: rgb(170, 170, 253);
+}
+
+#cart-button .active {
     background-color: rgb(170, 170, 253);
 }
 
@@ -108,6 +115,29 @@ button {
     max-width: 2rem;
 }
 
+/* -----Responsive----- */
+
+@media screen and (max-width: 800px){
+    #products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px){
+    #products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* -----Profile Page----- */
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
 #profile {
     background-color: tomato;
     padding: 1rem 2rem;
@@ -123,14 +153,7 @@ button {
     background-color: #ffffff;
 }
 
-@media screen and (max-width: 800px){
-    #products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.products-link {
+    font-size: 2.5rem;
 }
 
-@media screen and (max-width: 500px){
-    #products-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
