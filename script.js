@@ -1,7 +1,7 @@
 let productsGrid = document.getElementById('products-grid');
 let productsArray = [];
 let xhr = new XMLHttpRequest();
-let url = 'https://my-json-server.typicode.com/RobocodeSchool/marketplace/';
+let url = 'https://my-json-server.typicode.com/RobocodeSchool/marketplace';
 
 xhr.open('GET',url + '/products');
 xhr.responseType = 'json'
@@ -35,8 +35,14 @@ function addProductToCart(id) {
 
 // CART ----------------
 
-let cart = [];
 let cartProd = document.getElementById('cart-products');
+
+let cart = [];
+if(localStorage.getItem('cart')) {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    drawCartProducts();
+}
+
 
 function addProductToCart(id) {
     let product = productsArray.find(function(p) {
@@ -44,6 +50,7 @@ function addProductToCart(id) {
     })
     cart.push(product);
     drawCartProducts();
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 function drawCartProducts() {
@@ -52,6 +59,7 @@ function drawCartProducts() {
     cart.forEach(function(p){
         cartProd.innerHTML += `
             <p><img src="${p.photo_url}"> ${p.name} |${p.price}$</p>
+            <hr>
         `;
         sum += p.price;
     });
@@ -63,7 +71,8 @@ function drawCartProducts() {
 
 function buyAll() {
     cart = [];
-    cartProd.innerHTML = 'Money was withdrawn from your credit card'
+    cartProd.innerHTML = 'Money was withdrawn from your credit card';
+    localStorage.setItem("cart", null);
 }
 
 function openCart() {
