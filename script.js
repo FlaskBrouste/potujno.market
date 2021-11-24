@@ -17,7 +17,7 @@ xhr.onload = function() {
             <img class='product-photo' src='${p.photo_url}' alt='${p.name}'>
             <p class='product-price'><b>Price: </b>${p.price}$</p>
             <p class='product-description'><b>Description: </b>${p.description}</p>
-            <a href='userProfile.html?id=${p.author_id}'>Go to author profile</a>
+            <a href='userProfile.html?id=${p.author_id}'>Seller profile</a>
             <button onclick="addProductToCart(${p.id})">Buy</button>
         `;
         productsGrid.append(pElem);
@@ -51,9 +51,15 @@ function addProductToCart(id) {
     cart.push(product);
     drawCartProducts();
     localStorage.setItem("cart", JSON.stringify(cart));
+
+    document.getElementById('cart-button').classList.add('active');
+    setTimeout(function(){
+        document.getElementById('cart-button').classList.remove('active');
+    },500);
 }
 
 function drawCartProducts() {
+    if(cart.length === 0) return cartProd.innerHTML = 'Cart is empty';
     cartProd.innerHTML = null;
     let sum = 0;
     cart.forEach(function(p){
@@ -66,7 +72,7 @@ function drawCartProducts() {
     cartProd.innerHTML += `
         <p>Total Price: ${sum}$</p>
         <button onclick="buyAll()">Buy All</button>
-    `
+    `;
 }
 
 function buyAll() {
@@ -76,9 +82,5 @@ function buyAll() {
 }
 
 function openCart() {
-    if (cartProd.style.display === 'none') {
-        cartProd.style.display = 'block';
-    } else {
-        cartProd.style.display = 'none';
-    }
+    cartProd.classList.toggle('hide');
 }

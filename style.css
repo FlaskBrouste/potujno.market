@@ -79,8 +79,8 @@ button {
     background-color: rgb(170, 170, 253);
 }
 
-#cart-button .active {
-    background-color: rgb(170, 170, 253);
+#cart-button.active {
+    background-color: rgb(253, 170, 221);
 }
 
 #cart-products::before {
@@ -101,9 +101,12 @@ button {
     right: 0rem;
     left: -16rem;
     position: absolute;
-    display: none;
     padding: 10px;
     text-align: left;
+}
+
+.hide { 
+    display: none; 
 }
 
 #cart-products p {
