@@ -125,13 +125,13 @@ button {
 
 /* -----Responsive----- */
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     #products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     #products-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -141,14 +141,15 @@ button {
 
 .profile-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    gap: 1rem;
 }
 
 #profile {
     background-color: tomato;
-    padding: 2rem;
+    padding: 1rem 3rem;
     flex-basis: 20rem;
     text-align: center;
     border-radius: 1rem;
@@ -173,3 +174,24 @@ button {
     transform: scale(1.2);
 }
 
+.user-products {
+    position: relative;
+}
+
+.user-products h1 {
+    position: absolute;
+    left: 2rem;
+    top: -1.2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000;
+
+}
+
+#user-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: tomato;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
